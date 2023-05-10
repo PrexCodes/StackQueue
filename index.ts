@@ -1,63 +1,58 @@
-//stack - first in last out principle
-class Stack{
+//stack is a list of items arranged in first in last out order, last in first out order
 
-    stackeditems: any[]
+class Stack{
+    stack: Array<any>
     constructor(){
-        this.stackeditems = []
+        this.stack = []
     }
 
-    add(name){
-        this.stackeditems.push(name)        
+    add(item){
+        this.stack.push(item)
     }
     remove(){
-        this.stackeditems.pop()
+        this.stack.pop()
     }
-
-    showArray(){
-        console.log(this.stackeditems);
+    showItem(){
+        console.log(this.stack);
         
     }
 }
 
-// let ourStack = new Stack(); //--Instance of a class
+let myStack = new Stack()
+// myStack.add('Precious')
+// myStack.add('Don')
+// myStack.add('Ehiabhi')
+// myStack.add('Samuel')
+// myStack.showItem()
 
-// ourStack.add("Okus")
-// ourStack.add("Precious")
-// ourStack.add("Solomon")
-// ourStack.add("Faith")
-// ourStack.add("Fash")
-// ourStack.remove()
-// ourStack.remove()
-// ourStack.showArray()
+// myStack.remove()
+// myStack.showItem()
 
-
-//for queues - firstin firstout principle
-class Queues{
-
-    queue: Array<any>
+//queue - it is a list of items or a data structure with the first in first ouy principle
+class Queue{
+    queue: any[]
     constructor(){
         this.queue = []
     }
 
-    add(item){
+    add(item: any){
         this.queue.push(item)
     }
     remove(){
         this.queue.shift()
     }
-    showArray(){
+    showItems(){
         console.log(this.queue)
     }
 }
 
-let queue = new Queues()
-queue.add('Faith')
-queue.add('Spirit')
-queue.add('Oil')
-queue.add('Groceries')
-queue.add('Don')
-queue.add('Faith')
-queue.remove()
-queue.remove()
-queue.remove()
-queue.showArray()
+let myQueue = new Queue()
+myQueue.add('A')
+myQueue.add('B')
+myQueue.add('C')
+myQueue.add('D')
+myQueue.add('E')
+myQueue.remove()
+myQueue.remove()
+myQueue.remove()
+myQueue.showItems()
